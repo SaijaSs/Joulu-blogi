@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Joulutarinasi</title>
+    <meta name="author" content="Saija Salonsaari">
+    <meta name="description" content="Joulutarinasi">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./Kuvat/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container">
+
+        <header>
+            <div class="header"></div>
+            <div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="Etusivu.html" target="_blank">Etusivu</a></li>
+                        <li><a href="Jouluperinteet.html" target="_blank">Jouluperinteet</a></li>
+                        <li><a href="Reseptit.html" target="_blank">Reseptit</a></li>
+                        <li><a href="Lahjaideat.html" target="_blank">Lahjaideat</a></li>
+                        <li><a href="Koristeet.html" target="_blank">Koristelu</a></li>
+                        <li> <a href="Musiikki.html" target="_blank">Musiikki</a></li>
+                        <li> <a href="Joulutarinasi.html" target="_blank">Joulutarinasi</a></li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div  class="crumb">
+                <nav aria-label="breadcrumb">
+                    <a href="Etusivu.html">Etusivu ♥</a>
+                    Joulutarinasi
+                </nav>
+            </div>
+
+        </header>
+
+        <main class="content">
+
+            <section class="otsikko">
+
+                <h1>Joulutarinasi</h1>
+
+            </section>
+
+            <section class="joulutarina">
+                <h2>Sinun joulusi - jaa joulutarinasi kanssani ❤️</h2>
+                <p>Joulussa on jotain taianomaista – ei vain koristeissa tai lahjoissa, vaan niissä hetkissä ja
+                    muistoissa, jotka tekevät jokaisesta joulusta ainutlaatuisen. <br>Minulle joulu on aikaa, jolloin sydän
+                    täyttyy ilosta, jaettu lämpö tuntuu kaikista tärkeimmältä.</p>
+                <p>Mutta mikä tekee juuri sinun joulustasi erityisen? <strong>Haluaisin kuulla tarinasi!</strong> 🎁✨ <br>Olisiko se muisto
+                    lapsuuden joulusta, hetki, joka sai sinut nauramaan kyyneleet silmissä, tai ehkä koskettava tilanne,
+                    joka kiteyttää joulun merkityksen?</p>
+                <p><strong>Jaa tarinasi kanssani alla olevan lomakkeen avulla</strong> – oli se pieni, suuri, hauska tai herkkä,
+                    jokainen tarina on ainutlaatuinen. <br>Ehkä juuri sinun kokemuksesi tuo iloa ja inspiraatiota muillekin.
+                </p>
+                <p>Ota siis mukava asento, lämmitä kuppi glögiä ja anna muistojen viedä mukanaan. Odotan innolla
+                    kuullakseni, mikä tekee sinun joulustasi unohtumattoman. ❤️🎅</p>
+
+            </section>
+
+            <section class="lomake">
+                <div class="reuna"></div>
+                <form name="Joulutarinat" method="POST" target="_blank">
+                    <label for="nimi">Nimi*:</label>
+                    <input type="text" id="nimi" name="etunimi" placeholder="Etunimi/nimimerkki" autofocus required>
+                    <label for="email">Sähköposti*:</label>
+                    <input type="email" id="email" required>
+                    <label for="tarinanimi">Joulutarinan nimi*:</label>
+                    <input type="text" id="tarinanimi" name="tarinanimi" placeholder="Tähän tarinasi nimi"  required>
+
+                    <fieldset>
+                        <legend>
+                            Mihin elämänvaiheeseen tarinasi sijoittuu?
+                        </legend>
+                        <label class="valinta" for="Lapsuus">
+                            <input class="input" type="radio" id="Lapsuus" name="ikavaihe" value="Lapsuus">
+                            Lapsuus</label>
+                        <br>
+                        <label class="valinta" for="Nuoruus">
+                            <input class="input" type="radio" id="Nuoruus" name="ikavaihe" value="Nuoruus">
+                            Nuoruus</label>
+                        <br>
+                        <label class="valinta" for="Aikuisuus">
+                            <input class="input" type="radio" id="Aikuisuus" name="ikavaihe" value="Aikuisuus">
+                            Aikuisuus</label>
+                        <br>
+                        <label class="valinta" for="Vanhuus">
+                            <input class="input" type="radio" id="Vanhuus" name="ikavaihe" value="Vanhuus">
+                            Vanhuus</label>
+                    </fieldset>
+
+                    <label for="ika">Ikäsi nyt:</label>
+                    <input type="number" id="ika" name="ika" min="1" max="110">
+
+
+                    <fieldset>
+                        <legend>Valitse tarinan elementtejä:</legend>
+                        <label class="valinta"><input class="input" type="checkbox" id="kommahdys" name="elementti"
+                                value="Kömmähdys">Kömmähdys</label>
+                        <br>
+                        <label class="valinta"><input class="input" type="checkbox" id="lamminmuisto" name="elementti"
+                                value="Lämmin muisto">Lämmin muisto</label>
+                        <br>
+                        <label class="valinta"><input class="input" type="checkbox" id="vauhdikas" name="elementti"
+                                value="Vauhdikas">Vauhdikas</label>
+                    </fieldset>
+
+                    <label for="tarina">Kirjoita tarinasi tähän*:</label>
+                    <textarea id="tarina" name="tarina" placeholder="Minun joulutarinani..." required></textarea>
+
+
+                    <div class="laheta">
+                        <button type="submit">Lähetä</button>
+
+                    </div>
+
+                </form>
+                <div class="reuna"></div>
+            </section> 
+
+
+        </main>
+
+
+
+        <footer class="footer">
+
+            <p>Have yourself a Merry little Christmas♥<br>
+                <strong>&copy;Saija Salonsaari</strong> 2024 <br>
+                Tekstisisältö on luotu tekoälyllä.
+            </p>
+
+        </footer>
+    </div>
+</body>
+
+</html>

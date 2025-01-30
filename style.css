@@ -1,0 +1,861 @@
+/*CSS-sisällysluettelo*/
+
+/*Rivi 16-> KAIKILLE YHTEISET
+Rivi 178-> 1 ETUSIVUN ASETUKSET
+Rivi 249-> 2 PERINTEETN-SIVUN ASETUKSET
+Rivi 313-> 3 LAHJAIDEAT-SIVUN ASETUKSET
+Rivi 370-> 4 RESEPTIT-SIVUN ASETUKSET
+Rivi 494-> 5 KORISTEET-SIVUN ASETUKSET
+Rivi 584-> 6 MUSIIKKI-SIVUN ASETUKSET
+Rivi 668-> 7 JOULUTARINASI-SIVUN ASETUKSET
+Rivi 769-> 8 KUVIEN MUOTOILU
+*/
+
+
+
+/*--------------------------------------KAIKILLE YHTEISET--------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*tähän esim. koko sivuston fonttiasetukset*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(246, 244, 226);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    background-image: url(Kuvat/koynnos.png);
+    background-position: center;
+    opacity: 0.8;
+    padding: 40px;
+    border: 3px solid rgb(19, 68, 19);
+    margin-bottom: 20px;
+
+}
+
+.crumb {
+    padding: 10px;
+    font-weight: bold;
+    margin-left: 15px;
+    color: rgb(182, 9, 9);
+}
+
+.crumb a {
+    text-decoration: none;
+    font-weight: normal;
+    color: black;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    /*venyttää kontentin viemään koko näytön tilan pystysuunnassa*/
+    flex-grow: 1;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.otsikko {
+    font-size: x-large;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+}
+
+
+/*------Linkkirivin asetukset------*/
+
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    /*luettelomerkit pois*/
+    list-style: none;
+    gap: 20px;
+    justify-content: space-evenly;
+    border-bottom: 3px solid rgb(19, 68, 19);
+
+}
+
+.nav ul li {
+    /*jokainen valikon "nappi" vie saman verran tilaa*/
+    flex: 1;
+    padding: 15px;
+    border-radius: 30px;
+    border-top: 1px solid rgb(215, 183, 2);
+    border-bottom: 2px solid rgb(215, 183, 2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.nav ul li a {
+    color: rgb(20, 91, 20);
+    font-size: medium;
+    font-weight: bold;
+    /*alaviiva pois*/
+    text-decoration: none;
+    /*pehmeä siirtymä hover väriin*/
+    transition: color 0.4s;
+
+}
+
+.nav ul li a:hover {
+    color: rgb(182, 9, 9);
+}
+
+
+/*-----------Fontit--------*/
+.fontti1 {
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/*----------Tekstin muotoilu----------*/
+
+/*Otsikot*/
+h1,
+h2 {
+    text-align: center;
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(182, 9, 9);
+
+}
+
+h3 {
+    text-align: center;
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(34, 34, 34);
+
+}
+
+p {
+    line-height: 1.5;
+    padding: 10px;
+}
+
+/*-------Footer--------*/
+
+.footer {
+    display: flex;
+    /*tekstilaatikko oikeaan reunaan*/
+    justify-content: right;
+    background-image: url(Kuvat/koynnos.png);
+    background-position: center;
+    opacity: 0.8;
+    padding: 40px;
+    border: 3px solid rgb(19, 68, 19);
+
+}
+
+.footer p {
+    text-align: right;
+    color: rgb(182, 9, 9);
+    padding: 0;
+    background-color: rgb(246, 244, 226);
+    opacity: 0.8;
+
+}
+
+/*--------------------------------------------1 ETUSIVU------------------------------------------*/
+
+.kuvat {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.etusivuintro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.intro {
+    /*tekstiosiot vievät saman verran tilaa*/
+    flex: 1;
+    text-align: left;
+}
+
+
+/*----------1.1 Joulukalenteri--------*/
+
+.kalenteri {
+    flex: 2;
+    padding: 30px;
+}
+
+.kalenteri ul {
+    display: flex;
+    flex-direction: row;
+    /*luukut rivittyvät oikein tilan sisälle*/
+    flex-wrap: wrap;
+    /*luettelomerkit pois*/
+    list-style: none;
+    padding: 10px;
+    justify-content: space-evenly;
+    border: 3px solid rgb(19, 68, 19);
+    border-radius: 15px;
+
+}
+
+
+.kalenteri ul li {
+    /*luukut samalla rivillä vievät saman verran tilaa*/
+    flex: 1;
+    padding: 30px;
+    background-color: rgb(182, 9, 9);
+    border: 2px dotted rgb(230, 226, 226);
+    margin: 20px;
+    /*numerot luukun keskelle*/
+    text-align: center;
+}
+
+.kalenteri ul li a {
+    font-size: 20px;
+    color: rgb(251, 247, 247);
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.kalenteri ul li:hover {
+    background-color: rgb(20, 91, 20);
+    border: 2px dotted rgb(230, 226, 226);
+}
+
+
+
+/*----------------------------------------------2 PERINNESIVU--------------------------------------*/
+
+/*tekstipalstat vierekkäin*/
+.rowperinne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+.historia {
+    /*tekstipalstat vie saman verran tilaa*/
+    flex: 1;
+    border-right: 2px dotted black;
+}
+
+.nyky {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.video1 {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/*video responsiivinen*/
+.video1 {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Video katoaa pienemmällä näytöllä*/
+@media only screen and (max-width: 1000px) {
+    .video1 {
+        display: none;
+    }
+}
+
+/*--------2.1 Ei numeroitu lista-----*/
+
+.lista ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista ul li {
+    font-weight: bold;
+    font-size: large;
+    color: rgb(182, 9, 9);
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.lista ul li p {
+    color: black;
+    font-weight: normal;
+    font-size: medium;
+}
+
+/*------------------------------------------------3 LAHJASIVU----------------------------------------*/
+
+.lahjaintro {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.teksti {
+    flex: 1;
+}
+
+.lahjaideat {
+    display: flex;
+    /*idea-palikat vaihtavat riviä näytön pienentyessä*/
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /*tilaa idea-palikoiden väliin*/
+    gap: 15px;
+}
+
+
+.teksti2 h2 {
+
+    text-align: left;
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(182, 9, 9);
+
+}
+
+.ideat {
+    /*idea-palikat vievät saman verran tilaa yhdellä rivillä*/
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(232, 221, 190);
+    border-radius: 15px;
+
+}
+
+.ideat h3 {
+    padding-bottom: 10px;
+}
+
+.ideat a {
+    text-decoration: none;
+    color: rgb(182, 9, 9);
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.ideat a:hover {
+    color: rgb(20, 91, 20);
+}
+
+/*---------------------------------------------4 RESEPTISIVU----------------------------------------*/
+
+
+/*reseptin selaus ja kuva-osio riviin*/
+.resepti-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.resepti {
+    display: flex;
+    flex-direction: row;
+    /*reseptin osat asettuvat tasaisesti riville*/
+    justify-content: space-between;
+    align-items: center;
+    /*reseptin osat vaihtavat riviä, kun näyttö pienenee*/
+    flex-wrap: wrap;
+    border: 3px double black;
+    padding: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+
+/*----4.1 Sivun sisäinen navi----*/
+
+.sivunav {
+    display: flex;
+    /*osien asettuminen allekkain*/
+    flex-direction: column;
+    border: 3px double black;
+    border-radius: 15px;
+}
+
+.sivunav ul {
+    /*luettelomerkki pois*/
+    list-style: none;
+}
+
+.sivunav ul li {
+    padding: 40px;
+}
+
+.sivunav ul li a {
+    /*linkin alaviiva pois*/
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    transition: color 0.4s;
+}
+
+.sivunav ul li a:hover {
+    color: gold;
+}
+
+
+/*----------4.2 Numeriotu lista-------*/
+
+.numerolista {
+    /*valmistusluettelo vie saman verran tilaa muiden resepti-osien kanssa*/
+    flex: 1;
+    display: flex;
+    /*Valmistus-otsikko listan päälle*/
+    flex-direction: column;
+}
+
+.numerolista h3 {
+    /*otsikko asettuu vasemmalle*/
+    text-align: left;
+}
+
+.numerolista ol {
+    padding-top: 15px;
+}
+
+.numerolista ol li {
+    /*riviväli suuremmaksi listan osien välille*/
+    line-height: 1.5;
+    margin-left: 15px;
+}
+
+/*----------4.3 Taulukko---------*/
+
+.taulukko {
+    /*ainestaulukko vie saman verran tilaa muiden resepti-osien kanssa*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /*taulukko irti valmistusohjeesta*/
+    margin-right: 40px;
+
+}
+
+/*otsikko tulee keskelle taulukon päälle*/
+.taulukko h2 {
+    text-align: center;
+}
+
+.taulukko table {
+    /*dotted tulee irti vihreästä reunasta*/
+    padding: 20px;
+    border: 2px dotted rgb(182, 9, 9);
+}
+
+.taulukko th,
+td {
+    border: 1px solid rgb(20, 91, 20);
+    padding: 20px;
+}
+
+/*taulukon otsikon muotoilu*/
+.taulukko caption {
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/*---------------------------------------------5 KORISTELUSIVU---------------------------------------*/
+
+.video {
+    display: flex;
+    /*video keskelle ruutua*/
+    justify-content: space-around;
+    border-bottom: 2px dotted rgb(182, 9, 9);
+    /*reuna irti videosta*/
+    padding: 20px;
+}
+
+/*video responsiivinen*/
+.video video {
+    max-width: 100%;
+    height: auto;
+}
+
+.koristeinfo {
+    display: flex;
+    /*kuva ja tekstiosa allekkain*/
+    flex-direction: column;
+    /*osiot keskelle*/
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.tekstiosa {
+    /*teksti keskelle tilaa*/
+    text-align: center;
+}
+
+
+/*huoneen kuvailun osiot allekkain*/
+.huoneet {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.huoneet h3 {
+    /*otsikko vasemmalle*/
+    text-align: left;
+    border-bottom: 3px dotted rgb(20, 91, 20);
+    /*tilaa otsikon ympärille*/
+    padding: 20px;
+}
+
+
+.huone {
+    display: flex;
+    /*huoneen koristeluosiot ja kuva riviin*/
+    flex-direction: row;
+    /*osioiden asettelu tasaisesti tilaan*/
+    justify-content: space-between;
+    /*tilaa seuraavan osion väliin*/
+    padding-bottom: 30px;
+    /*tila listojen väliin*/
+    gap: 20px;
+}
+
+
+
+
+
+/*----- 5.1 Ei-numerolista----*/
+
+.lista1 {
+    /*huoneen koristelu-osiot ja kuva vievät saman verran tilaa*/
+    flex: 1;
+    background-color: antiquewhite;
+    border-radius: 15px;
+}
+
+.lista1 ul li {
+    color: black;
+    padding: 5px;
+    /*listamerkki muutettu*/
+    list-style: circle;
+    /*listan teksti laatikon sisään sisentäminen*/
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/*listan "otsikon" muotoilu*/
+.lista1 p {
+    font-weight: bold;
+}
+
+
+/*-------------------------------------6 MUSIIKKISIVU-------------------------------------*/
+
+/*musa-intro ja top-5 lista asettelu riviin*/
+.eka {
+    display: flex;
+    flex-direction: row;
+}
+
+/*tekstiosio leveämmäksi, kuin top-5-lista*/
+.musaintro {
+    flex: 2;
+}
+
+.top5 {
+    display: flex;
+    /*biisien asettelu allekkain*/
+    flex-direction: column;
+    /*top-5-osio pienemmäksi kuin tekstiosio*/
+    flex: 1;
+    /*biisit tasaisesti alekkain*/
+    justify-content: space-evenly;
+    border: 4px double black;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+.audio-soitin {
+    /*tilaa soittimen alle*/
+    padding-bottom: 20px;
+    /*soitin koko tilan levyiseksi*/
+    width: 100%;
+}
+
+/*tekstiosio ja soittolistat allekkain*/
+.toka {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.soittolistaintro {
+    /*väliä edellisten osioiden alle*/
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.soittolista {
+    display: flex;
+    /*soittolistat allekkain*/
+    flex-direction: column;
+    /*tila soittolistojen väliin*/
+    gap: 10px;
+    /*irti footerin alusta*/
+    padding-bottom: 30px;
+}
+
+.soittolista a {
+/*alleviiva pois linkistä*/
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    border: 4px double white;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+/*värit soittolistoihin*/
+#pinkki {
+    background-color: purple;
+}
+
+#ruskea {
+    background-color: brown;
+}
+
+#punainen {
+    background-color: red;
+}
+
+
+/*---------------------------------------------7 JOULUTARINASI-----------------------------------------------*/
+
+.joulutarina {
+    display: flex;
+    /*tekstiosiot allekkain*/
+    flex-direction: column;
+    /*tekstit keskelle*/
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.lomake {
+    display: flex;
+    /*sivupalkit ja lomake riviin*/
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /*lomake isompi, kuin reunapalat*/
+    flex: 2;
+    border: 4px double black;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.reuna {
+    /*reunat vie saman verran tilaa ja on pienempi kuin lomake*/
+    flex: 1;
+    background-image: url(./Kuvat/tausta3.png);
+    /*hieman läpikuultavuutta osioon*/
+    opacity: 0.7;
+    border-radius: 5px;
+    border: 4px double black;
+
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+/*checkboxin ja radionappien tekstit ei-lihavoiduksi*/
+.valinta {
+    font-weight: normal;
+}
+
+
+/*vastausruutujen muotoilua, lisää tilaa ympärille, reunojen pyöristys*/
+input,
+textarea,
+button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/*checkboxin ja radio-nappien ympärille tilaa*/
+fieldset {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/*teksti irti valinta-ruuduista ja radio-napeista*/
+.input {
+    margin: 0.5em 0.5em 0;
+}
+
+.laheta {
+    display: flex;
+}
+
+/*Lähetä-napin muotoilu*/
+button[type=submit] {
+    background-color: rgb(20, 91, 20);
+    color: white;
+    font-size: medium;
+}
+
+/*reunat, kun vie hiiren napin päälle*/
+button[type=submit]:hover {
+    border: 2px solid white;
+}
+
+/*reunapalkit katoaa, kun näyttö pienenee*/
+@media(max-width: 768px) {
+    .reuna {
+        display: none;
+    }
+}
+
+/*---------------------------------------8 KUVIEN MUOTOILU---------------------------------------*/
+
+/*Etusivulla kuvissa*/
+.kuva {
+     /*kaikki kuvat vie saman verran tilaa*/
+    flex: 1 1 300px;
+   
+}
+
+/*Kuva responsiivinen*/
+.kuva img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+/*Lahjaidea- ja Resepti-sivun kuvissa*/
+.kuva1 {
+    /*kuva vie saman verran tilaa muiden sectionin osioiden kanssa*/
+    flex: 1 1 300px;
+    /*kuva irti tekstipalikasta*/
+    padding-left: 100px;
+    
+}
+
+/*Kuva responsiivinen*/
+.kuva1 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*kuva katoaa, kun ruutu pienempi kuin 1000px*/
+@media only screen and (max-width: 1000px) {
+    .kuva1 {
+        display: none;
+    }
+}
+
+/*Resepti-sivulla resepteissä ja Koristelu-sivulla yhdessä kuvassa*/
+
+/*Kuva responsiivinen*/
+.kuva3 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*Koristeet-sivulla*/
+.kuva4 {
+    display: flex;
+    /*asettuu divinsä keskelle*/
+    justify-content: space-around;
+    /*vie saman verran tilaa osion muiden palikoiden kanssa*/
+    flex: 1 1 300px;
+    padding: 10px;
+    /*kuva asettuu ylä-ala suunnassa keskelle*/
+    align-items: center;
+    border: 3px double black;
+    border-radius: 10px;
+}
+
+/*Kuva responsiivinen*/
+.kuva4 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*kuva katoaa, kun ruutu pienempi kuin 1000px*/
+@media only screen and (max-width: 1000px) {
+    .kuva4 {
+        display: none;
+    }
+}
+
+
+/*Jouluperinteet-sivulla ja Musiikki-sivulla*/
+
+/*tilaa kuvien ympärille*/
+.kuva5 {
+   padding: 20px;
+}
+
+/*Kuva responsiivinen*/
+.kuva5 img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*kuva katoaa, kun ruutu pienempi kuin 1000px*/
+@media only screen and (max-width: 1000px) {
+    .kuva5 {
+        display: none;
+    }
+}
